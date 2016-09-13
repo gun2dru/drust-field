@@ -1,0 +1,7 @@
+name: Drufi
+description: Defines a text, description and entity field.
+type: module
+package: Field types
+core: 8.x
+dependencies:
+  - field
