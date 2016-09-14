@@ -34,7 +34,7 @@ class DrufiFormatter extends FormatterBase {
       $elements[$delta] = [
         [
         '#type' => 'markup',
-        '#markup' => $item->name . ', City: ' . $item->history . ', Link: ' . $item->node_id
+        '#markup' => $item->name . ', History: ' . $item->history . ', Link: ' . $item->node_id
         ],
       ];
     }

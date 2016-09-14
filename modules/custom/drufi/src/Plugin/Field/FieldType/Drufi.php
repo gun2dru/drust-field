@@ -65,7 +65,7 @@ class Drufi extends FieldItemBase {
     ];
     $columns['node_id'] = [
       'type' =>'int',
-      'length' => 10,
+      'size' => 'small',
     ];    
    
     return [
@@ -84,7 +84,8 @@ class Drufi extends FieldItemBase {
 
     $isEmpty = 
       empty($this->get('name')->getValue()) &&
-      empty($this->get('history')->getValue());
+      empty($this->get('history')->getValue()) &&
+      empty($this->get('node_id')->getValue());
 
     return $isEmpty;
   }

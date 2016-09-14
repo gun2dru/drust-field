@@ -6,6 +6,7 @@ use Drupal;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\WidgetBase;
 use Drupal\Core\Form\FormStateInterface;
+
 /**
  * Plugin implementation of the 'DrufitWidget' widget.
  *
@@ -54,17 +55,14 @@ class DrufiWidget extends WidgetBase {
     ];
     
     // link to entity
-    
+    $selection_handler_settings = $this->configuration['handler_settings'];
     $element['node_id'] = [
     '#type' => 'entity_autocomplete',
-    '#title' => $this->t('Node'),
     '#target_type' => 'node',
+    '#title' => t('Node id'),
     '#selection_settings' => ['target_bundles' => ['page']],
-    '#tags' => TRUE,
-    '#size' => 10,
-    '#maxlength' => 1024, 
     ];
-
+    
   return $element;
   
   }
